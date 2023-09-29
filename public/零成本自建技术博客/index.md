@@ -1,0 +1,51 @@
+# 零成本自建技术博客
+
+
+### 方案选择
+
+github pages 提供博客站点 + hugo 提供博客模板
+
+### part 1 : Github Pages
+
+官网：[GitHub Pages](https://pages.github.com/)
+
+选择 github pages 的优点就是 github 使用频率高，并且作为全球最大的代码托管平台，也很稳定，即使是免费提供使用也不用担心跑路的问题，缺点当然就是对于国内的网络访问不算友好
+
+步骤如下：
+
+1. 新建 Repositories 用于存储博客内容，注意：名称格式为：`<用户名>.github.io`
+2. 将博客网页代码上传至仓库中
+3. 访问博客，博客站点访问地址为：`https://<用户名>.github.io/`
+
+### part 2 : hugo
+
+官网：[The world’s fastest framework for building websites | Hugo (gohugo.io)](https://gohugo.io/)
+
+hugo 是使用 go 语言实现的静态博客网站生成器，可将 md 文章内容转换为美观的博客网站代码
+
+步骤如下：
+
+1. 安装 git 用于将博客网页上传 Github, 安装 hugo 用于生成博客网页（最好安装extended版本）
+
+2. 运行 `hugo new site <文件夹名>`，生成基本的博客网页代码骨架，同时也会有后续使用的指示
+
+   ```jsx
+   1. Change the current directory to D:\\AAAData\\Code\\Blog\\blog.
+   2. Create or install a theme:
+      - Create a new theme with the command "hugo new theme <THEMENAME>"
+      - Install a theme from <https://themes.gohugo.io/>
+   3. Edit hugo.toml, setting the "theme" property to the theme name.
+   4. Create new content with the command "hugo new content <SECTIONNAME>\\<FILENAME>.<FORMAT>".
+   5. Start the embedded web server with the command "hugo server --buildDrafts".
+   ```
+
+3. 安装主题，我选用的是 LoveIt，运行 `git clone <https://github.com/dillonzq/LoveIt.git> themes/LoveIt`
+
+4. 依据主题配置说明，例如 LoveIt 主题的 https://hugoloveit.com/，配置 hugo.toml
+
+5. 在 content 文件夹下编写 md 文章，运行 `hugo new content <FILENAME>` 添加博客内容
+
+6. 运行 hugo 指令生成静态博客网站代码
+
+7. 上传至 Github Pages 所对应的仓库
+
